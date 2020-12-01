@@ -10,7 +10,7 @@ console.log("normalized path:", path.normalize(wrongPath));
 const customPath = path.join(__dirname, "/testFolder");
 console.log("customPath", customPath);
 app.get("*", (req, res) => {
-  res.send(`Hello`);
+  res.send({name : "matrix", id : 12});
 });
 app.listen(port, () => {
   console.log(`I'm listening on ${host}:${port}`);
