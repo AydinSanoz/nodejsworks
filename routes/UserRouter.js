@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const data = require("../models/data")
+
 // path : /user
 
 router.get('/', (req, res) => {
-	res.send('User Page');
+	res.render('user', {users : data.userList});
 });
 router.get('/add', (req, res) => {
 	res.send('User Page Add');
